@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Passion+One:wght@400;700;900&display=swap');
+
+ :root{
+    --font1: Verdana, "Geneva", Tahoma, sans-serif;
+    --font2: "Passion one", "cursive";
+    --font3: "Comic Neue", "cursive";
+} */
+
+ *{
+    margin: 0px;
+    font-size: 1.05em;
+}
+
+html, body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+h1 {
+    background-color: rgb(39, 35, 35);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: darkred;
+    text-align: center;
+    font-size: 4vh;
+    padding: 25px;
+}
+
+form {
+    text-align: center;
+    margin: 10px;
+}
+
+form > p > input{
+    margin: 10px;
+    background-color: white;
+    text-align: center
+}
+
+.botao{
+    font-weight: bolder;
+    font-size: 3vh;
+    background-color: darkred;
+    padding: 15px 30px;
+    border-radius: 10px;
+}

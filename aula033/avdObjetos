@@ -1,0 +1,25 @@
+// ATRIBUIÇÃO VIA DESESTRUTURAÇÃO
+
+const pessoa = {
+    nome: 'Marcus',
+    nome2: 'Vinicius',
+    sobrenome: 'Martins',
+    idade: 21,     
+    endereco: {
+        rua: 'Otavio Job',
+        numero: 320
+    } 
+};
+
+const nome2 = pessoa.nome2; //FORMA COMUM 
+console.log(nome2);
+
+const {nome : teste = 'zero' , idade, sobrenome} = pessoa; // AVG
+console.log(teste, idade, sobrenome);
+
+const { endereco : {rua: r, numero} } = pessoa;
+console.log(r);
+console.log(numero);
+
+const { nome, ...resto } = pessoa;
+console.log(nome, resto);

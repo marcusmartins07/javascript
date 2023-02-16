@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar {
+  display: none; /* Oculta o navbar inicialmente */
+}
+
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+
+    <button id="nav-btn">Open Navigation</button>
+    <nav id="navbar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      
+      
+
+    <script>
+
+var navbar = document.getElementById("navbar");
+var navBtn = document.getElementById("nav-btn");
+
+navBtn.addEventListener("click", function() {
+  if (navbar.style.display === "block") {
+    navbar.style.display = "none";
+  } else {
+    navbar.style.display = "block";
+  }
+});
+
+    </script>
+</body>
+</html>

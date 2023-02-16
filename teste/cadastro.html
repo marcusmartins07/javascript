@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuario</title>
+    <style>
+      /* Configurações gerais */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Definição das cores */
+      :root {
+          --primary-color: #007bff;
+          --secondary-color: #6c757d;
+          --tertiary-color: #f8f9fa;
+      }
+
+      /* Estilos de cabeçalho */
+      header {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 1em;
+        text-align: center;
+      }
+
+      /* Estilos de formulário */
+      form {
+        padding: 2em;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 0.5em;
+      }
+
+      form input,
+      form textarea {
+        width: 100%;
+        padding: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      /* Estilos de botão */
+      form input[type="submit"] {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 0.75em;
+        margin-top: 1em;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Cadastro</h1>
+    </header>
+    <form>
+      <label>Nome: <span style="color: red;">*</span></label>
+      <input type="text" name="nome" required>
+
+      <label>Email: <span style="color: red;">*</span></label>
+      <input type="email" name="email" required>
+
+      <label>Telefone: <span style="color: red;">*</span></label>
+      <input type="tel" name="telefone" required>
+
+      <label>Observações:</label>
+      <textarea name="observacoes"></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
