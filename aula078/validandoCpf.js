@@ -17,9 +17,24 @@ se resultado > 9 entao = primeiro digito é 0
 
 */
 
-let cpf = '705.484.450-52';
-let cpfLimpo = cpf.replace(/\D+/g, '');
-cpfArray = Array.from(cpfLimpo);
-console.log(cpfArray.splice(9,2));
-let cpfSoma = (cpfArray.reduce((ac, val) => ac + Number(val) , 0));
-console.log(cpfSoma);
+function ValidaCPF(cpfEnviado) {
+    // Limpar o CPF
+    Object.defineProperty(this, 'cpfLimpo', {
+        enumerable:true,
+        get: function () {
+            return cpfEnviado.replace(/\D+/g, '');
+        }
+    });
+}
+
+ValidaCPF.prototype.valida = function () {
+    if (typeof this.cpfLimpo == 'undefined') return false;
+    if (this.cpfLimpo.lenght !== 11) return false;
+    
+    return true; 
+}
+
+const cpf = new ValidaCPF('705.484.450-52');
+console.log(cpf.cpfLimpo);
+console.log(cpf.valida());
+
