@@ -26,5 +26,3 @@ class ValidaCPF {
 
 const cpf = new ValidaCPF('705.484.450-52');
 console.log(cpf.valida());
-
-load 
