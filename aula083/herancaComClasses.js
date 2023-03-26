@@ -36,7 +36,7 @@ class Smartphone extends DispositivoEletronico{
 class Tablet extends DispositivoEletronico {
     constructor(nome, familia){
     super(nome);
-    this.temWifi = temWifi;
+    //this.temWifi = temWifi;
     }
     
     ligar() {

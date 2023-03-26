@@ -3,7 +3,7 @@
 class Pessoa { // <- construtor
     constructor(nome, sobrenome) {
         this.nome = nome;
-        this.sobrenome = sobrenome
+        this.sobrenome = sobrenome;
     }
 
     falar() { // <- metodo
@@ -24,6 +24,8 @@ console.log(p1);
  // qualquer pessoa que eu criar vai herdar os metodos do pai = "Pessoa"
 const p2 = new Pessoa('Linda', 'Fernandez');
 const p3 = new Pessoa('Vinicius', 'Silva');
+console.log(p2);
+console.log(p3);
 
 //Exemplo com constructor functions
 // criado função construtora
