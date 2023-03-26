@@ -9,20 +9,47 @@ class ValidaCPF {
         });
     }
 
-    esequencia() {
-        const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length);
-        console.log('passei');
-        return sequencia === this.cpfLimpo;
+    eSequencia() {
+        return this.cpfLimpo.charAt(0). repeat(11) === this.cpfLimpo;
+    }
+
+    geraNovoCpf() {
+        const cpfSemDigitos = this.cpfLimpo.slice(0,-2);
+        const digito1 = ValidaCPF.geraDigito(cpfSemDigitos);
+        const digito2 = ValidaCPF.geraDigito(cpfSemDigitos + digito1);
+        this.novoCPF = cpfSemDigitos + digito1 + digito2;
+    }
+
+    static geraDigito(cpfSemDigitos) {
+        let total = 0;
+        let reverso = cpfSemDigitos.length +1;
+
+        for(let stringNumerica of cpfSemDigitos) {
+            total += (reverso * Number(stringNumerica));
+            reverso--;
+        }
+        const digito = 11 - (total % 11);
+        return digito <= 9 ? String(digito): '0';
     }
 
     valida() {
-        if(typeof this.cpfLimpo === 'undefined') return false;
+        if(!this.cpfLimpo) return false;
+        if(typeof this.cpfLimpo !== 'string') return false;
         if(this.cpfLimpo.length !== 11) return false;
-        return 'aqui';
+        if(this.eSequencia()) return false;
+        this.geraNovoCpf();
+        return this.novoCPF === this.cpfLimpo;
     }
     
 
 }
 
-const cpf = new ValidaCPF('705.484.450-52');
-console.log(cpf.valida());
+let cpf = new ValidaCPF('705.484.450-52');
+//cpf = new ValidaCPF('999.999.999-99');
+
+if (cpf.valida()) {
+    console.log('CPF válido');
+} else {
+    console.log('CPF Inválido');
+}
+
