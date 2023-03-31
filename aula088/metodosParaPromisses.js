@@ -60,7 +60,17 @@ Promise.all(promisses)
   // Promisse.resolve()
 
   function baixaPagina() {
-    return Promise.resolve('Pagina em cache');
-  } else {
-    return esperaAi('Baixei a página');
+    const emCahce = true;
+    
+    if (emCahce) {
+      return Promise.resolve('Pagina em cache');
+    } else {
+      return esperaAi('Baixei a página', 3000);
+    }
   }
+  
+baixaPagina()
+  .then(dadosPagina => {
+    console.log(dadosPagina);
+  })
+  .catch(e => console.log(3));
