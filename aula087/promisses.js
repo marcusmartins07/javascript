@@ -15,12 +15,13 @@ function esperaAi(msg, tempo, cb) {
 
 esperaAi('Frase 01', rand(1, 3))
   .then(resposta => {
-    console.log(resposta);
-    return esperaAi('Frase 2', rand(1, 3));
+    return esperaAi('Frase 02', rand(1, 3));
   })
   .then(resposta => {
-    console.log(resposta);
-    return esperaAi('Frase 3', rand(1, 3));
+    return esperaAi('Frase 03', rand(1, 3));
+  .then(() => {
+    console.log('Ultimo');
+  })
   })
   .catch();
 
