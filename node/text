@@ -1,0 +1,20 @@
+instalar npm versão compact : npm init -y
+
+Instalar npm : npm install express
+
+atualizar npm : npm update
+
+desenvolvimento : install express --save-dev
+
+produção : install express --save-prod
+
+desinstalar : npm uninstal express
+
+instalar versão especifica : install express@2.1.0
+
+                                2     1     0  
+                              major minor patch
+
+corrigir bug = atualizar patch
+recurso novo = atualizar minor
+quebra de compatibilidade = major

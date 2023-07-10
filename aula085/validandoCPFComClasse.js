@@ -44,7 +44,7 @@ class ValidaCPF {
 
 }
 
-let cpf = new ValidaCPF('705.484.450-52');
+let cpf = new ValidaCPF('044.435.430-60');
 //cpf = new ValidaCPF('999.999.999-99');
 
 if (cpf.valida()) {
